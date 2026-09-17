@@ -32,10 +32,24 @@ CLUSTER_ORDER = [
     "ESG Disclosure & Ratings",
 ]
 
-# Display order only. The period boundaries themselves are declared once, in
-# PERIOD_BOUNDS in derive.py, and every record's own `period` field is what
-# these tables actually group on.
-PERIOD_ORDER = ["2011–2015", "2016–2020", "2021–2023", "2024–2026"]
+# Mirrors PERIOD_BOUNDS in derive.py (documented in CODEBOOK.md §6), which is
+# the canonical declaration. Not stored as a derived field -- the schema stays
+# at 36 fields per paper -- so every period table here computes it from
+# publication_year via period_of() below.
+PERIOD_BOUNDS = [
+    (2011, 2015, "2011–2015"),
+    (2016, 2020, "2016–2020"),
+    (2021, 2023, "2021–2023"),
+    (2024, 2026, "2024–2026"),
+]
+PERIOD_ORDER = [label for _, _, label in PERIOD_BOUNDS]
+
+
+def period_of(year):
+    for lo, hi, label in PERIOD_BOUNDS:
+        if year is not None and lo <= year <= hi:
+            return label
+    return None
 
 UNIT_ORDER = [
     "Firm-Year", "Other", "Portfolio-Level", "Asset-Level",
@@ -263,24 +277,24 @@ def stats(recs, links):
     # independently recomputes each of these from the frozen corpus.
     # -----------------------------------------------------------------
 
-    s["periods"] = collections.Counter(r["period"] for r in recs if r["period"])
+    s["periods"] = collections.Counter(period_of(r["publication_year"]) for r in recs if period_of(r["publication_year"]))
 
     s["journal_period"] = {}
     for j, jv in s["journals"].items():
         g = [r for r in recs if r["journal"] == j]
-        s["journal_period"][j] = collections.Counter(r["period"] for r in g if r["period"])
+        s["journal_period"][j] = collections.Counter(period_of(r["publication_year"]) for r in g if period_of(r["publication_year"]))
 
     s["cluster_period"] = {}
     for c in CLUSTER_ORDER:
         g = [r for r in recs if c in r["clusters"]]
-        s["cluster_period"][c] = collections.Counter(r["period"] for r in g if r["period"])
+        s["cluster_period"][c] = collections.Counter(period_of(r["publication_year"]) for r in g if period_of(r["publication_year"]))
 
     s["method_period"] = {}
     for code in METHOD_ORDER:
         g = [r for r in recs if code in r["method_codes"]]
         if not g:
             continue
-        s["method_period"][code] = collections.Counter(r["period"] for r in g if r["period"])
+        s["method_period"][code] = collections.Counter(period_of(r["publication_year"]) for r in g if period_of(r["publication_year"]))
 
     s["unit_cluster"] = {}
     for c in CLUSTER_ORDER:

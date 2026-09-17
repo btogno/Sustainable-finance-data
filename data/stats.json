@@ -225,8 +225,8 @@
   },
   "cluster_methods": {
     "Biodiversity & Nature": {
-      "ECON": 10,
       "OTH": 1,
+      "ECON": 10,
       "NLP": 3,
       "SURV": 2,
       "SAT": 2,
@@ -234,15 +234,15 @@
       "EXP": 1
     },
     "Climate Physical Risk": {
-      "ECON": 26,
       "NLP": 4,
+      "ECON": 26,
       "SAT": 12,
       "OTH": 1,
       "SURV": 1
     },
     "Climate Transition Risk & Corporate Emissions": {
-      "ECON": 39,
       "NLP": 7,
+      "ECON": 39,
       "OTH": 5,
       "SURV": 3,
       "SAT": 2,
@@ -250,8 +250,8 @@
       "FILE": 1
     },
     "Green Bonds & Sustainable Debt": {
-      "ECON": 12,
       "OTH": 2,
+      "ECON": 12,
       "SAT": 2,
       "EXP": 1,
       "SURV": 1

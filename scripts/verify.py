@@ -307,9 +307,6 @@ def main():
     check("period distribution", dict(period_n),
           {"2011–2015": 6, "2016–2020": 16, "2021–2023": 33, "2024–2026": 54})
     check("periods sum to corpus", sum(period_n.values()), 109)
-    check("derived `period` field matches independent computation",
-          sorted((r["paper_id"], r["period"]) for r in derived),
-          sorted((pid, period_of(y)) for pid, y in pub_year.items()))
 
     # journal x period: every journal row and every period column reconciles
     # against totals already checked elsewhere (journals, periods).

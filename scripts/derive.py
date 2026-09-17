@@ -157,8 +157,9 @@ OPENNESS_BAND = [
 # ---------------------------------------------------------------------------
 # Periodisation (documented in docs/CODEBOOK.md §6; used throughout Chapter 4
 # and Chapter 5 of the thesis for every period-by-period breakdown). Declared
-# once here so that every period table in the build — journal x period,
-# cluster x period, method x period — cuts the corpus the same way.
+# once here as the canonical cut, and mirrored (not stored as a 37th derived
+# field, to keep the schema at 36) in build_docs.py and verify.py, which
+# compute it on the fly from publication_year.
 # ---------------------------------------------------------------------------
 
 PERIOD_BOUNDS = [
@@ -307,7 +308,6 @@ def derive(rows):
                 "data_description": r["Description of data"].strip(),
                 "paper_link": r["Direct link"].strip(),
                 "publication_year": pub,
-                "period": period_of(pub),
                 "topic_flags": flags,
                 "topic_codes": [TOPIC_CODE[f] for f in flags],
                 "clusters": clusters,
