@@ -1,19 +1,23 @@
-# Open Sustainable Finance Data
+# Sustainable Finance Data
 
-A catalogue of the datasets behind **109 empirical sustainable finance papers**
+A catalogue of the data behind **109 empirical sustainable finance papers**
 published in the *Journal of Finance*, *Journal of Financial Economics*,
-*Review of Financial Studies* and *Review of Finance* through April 2026 — what
-each study used, whether any of it can be obtained, and under what terms.
+*Review of Financial Studies* and *Review of Finance* through April 2026 —
+what each study is built on: its raw sources, its methods, the coverage and
+geographic scope of its evidence, and, for every entry, whether any of it can
+be recovered and under what terms.
 
 <!-- BADGES:BEGIN -->
-![corpus](https://img.shields.io/badge/corpus-109%20papers-informational) ![journals](https://img.shields.io/badge/journals-4-informational) ![fully open](https://img.shields.io/badge/fully%20open-6%20%285.5%25%29-critical) ![mean openness](https://img.shields.io/badge/mean%20openness-0.33-yellow) ![links checked](https://img.shields.io/badge/links%20checked-2026--08--22-lightgrey) ![data licence](https://img.shields.io/badge/data%20licence-CC%20BY%204.0-blue) ![code licence](https://img.shields.io/badge/code%20licence-MIT-blue)
+![corpus](https://img.shields.io/badge/corpus-109%20papers-informational) ![journals](https://img.shields.io/badge/journals-4-informational) ![fully open](https://img.shields.io/badge/fully%20open-6%20%285.5%25%29-critical) ![mean availability](https://img.shields.io/badge/mean%20availability-0.33-yellow) ![links checked](https://img.shields.io/badge/links%20checked-2026--08--22-lightgrey) ![data licence](https://img.shields.io/badge/data%20licence-CC%20BY%204.0-blue) ![code licence](https://img.shields.io/badge/code%20licence-MIT-blue)
 <!-- BADGES:END -->
 
-This catalogue includes papers that release nothing alongside those that do.
-The question it answers is *what share of the field is reproducible*, and that
-share is not measurable against a sample selected on being open. Every paper in
-the frozen corpus appears below, with a scored openness level and, where one
-exists, a checked link.
+Every paper in the frozen corpus is catalogued, whether or not it releases
+anything: source, method, coverage window and geographic scope are coded for
+all 109, and each paper's data and code availability is recorded alongside
+them as one further coded field rather than a condition of entry. That is what
+makes the availability rate of the field measurable rather than assumed, and
+it is why papers that release nothing appear here beside those that do, each
+with a scored availability level and, where one exists, a checked link.
 
 ## Headline figures
 
@@ -23,7 +27,7 @@ exists, a checked link.
 | Papers coded | **109** (JF 14 · JFE 42 · RFS 22 · RoF 31) |
 | Fully open (data **and** code) | **6** (5.5 %) |
 | Fully closed (neither) | **34** (31.2 %) |
-| Mean openness score | **0.33** (data 0.31 · code 0.35) |
+| Mean availability score | **0.33** (data 0.31 · code 0.35) |
 | Code released without data | **31** papers, against 3 the other way |
 | Touch at least one licensed input | **92** (84.4 %) |
 | Mean data score, licensed-only vs public-only | **0.16** vs **0.55** |
@@ -39,7 +43,7 @@ every build.
 
 | Path | What it is |
 |---|---|
-| [`docs/CATALOGUE.md`](docs/CATALOGUE.md) | **The catalogue.** All 109 papers, one row each, sorted by openness: topic and method codes, raw inputs with their licensing exposure, coverage window, geographic scope, availability badges and access links. Indexed by cluster at the foot. |
+| [`docs/CATALOGUE.md`](docs/CATALOGUE.md) | **The catalogue.** All 109 papers, one row each, sorted by availability score: topic and method codes, raw inputs with their licensing exposure, coverage window, geographic scope, availability badges and access links. Indexed by cluster at the foot. |
 | [`docs/CITATIONS.md`](docs/CITATIONS.md) | Full verbatim citation for every paper ID. |
 | [`docs/CODEBOOK.md`](docs/CODEBOOK.md) | Every field defined; the two scoring keys; the source-licensing classification; the topic-to-cluster mapping. Read this before citing any number. |
 | [`docs/STATS.md`](docs/STATS.md) | All descriptive statistics, generated. |
@@ -55,7 +59,7 @@ every build.
 
 **Looking for data to reuse.** Start with Tiers 1 to 3 below, then the top
 of [the catalogue](docs/CATALOGUE.md). Check the coverage column before the
-openness column: the median study in this corpus stops collecting data four
+availability column: the median study in this corpus stops collecting data four
 years before it is published, so a great many open assets are already too old
 for a question about the present.
 
@@ -236,8 +240,10 @@ data and does not redistribute it.
 
 ## Provenance
 
-Built from the corpus hand-coded for *Open-Source Datasets and Methods in
-Sustainable Finance*, a master's thesis at the University of Zurich
-(Department of Banking and Finance). Version 1.0 corresponds to the frozen
-109-paper corpus the thesis reports; later additions extend the catalogue
-without altering that baseline.
+Built from the corpus hand-coded for *Data in Sustainable Finance: Sources,
+Methods and Availability in the Top Finance Journals, 2010–2026*, a master's
+thesis at the University of Zurich (Department of Banking and Finance).
+Version 1.0 corresponds to the frozen 109-paper corpus the thesis reports;
+later additions extend the catalogue without altering that baseline. This
+repository was named `open-sustainable-finance-data` through v1.0.0; GitHub
+redirects the old name to `sustainable-finance-data`.

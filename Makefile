@@ -1,4 +1,4 @@
-# Open Sustainable Finance Data — build targets.
+# Sustainable Finance Data — build targets.
 # Standard library only, so no virtualenv is required to build or verify.
 # The one exception is `make import`, which needs openpyxl to read the workbook.
 
