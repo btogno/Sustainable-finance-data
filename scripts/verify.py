@@ -290,6 +290,121 @@ def main():
     check("README badges block was rendered",
           "<!-- BADGES:BEGIN -->\n<!-- BADGES:END -->" not in readme, True)
 
+    print("\n11. Six tables ported from Derived_tables_Ch4_Ch5_2026-09-16.md")
+    PERIOD_BOUNDS = [
+        (2011, 2015, "2011–2015"), (2016, 2020, "2016–2020"),
+        (2021, 2023, "2021–2023"), (2024, 2026, "2024–2026"),
+    ]
+
+    def period_of(y):
+        for lo, hi, label in PERIOD_BOUNDS:
+            if lo <= y <= hi:
+                return label
+        return None
+
+    pub_year = {r["PAPER ID"].strip(): max(yrs(r["Publication Year"])) for r in raw}
+    period_n = collections.Counter(period_of(y) for y in pub_year.values())
+    check("period distribution", dict(period_n),
+          {"2011–2015": 6, "2016–2020": 16, "2021–2023": 33, "2024–2026": 54})
+    check("periods sum to corpus", sum(period_n.values()), 109)
+    check("derived `period` field matches independent computation",
+          sorted((r["paper_id"], r["period"]) for r in derived),
+          sorted((pid, period_of(y)) for pid, y in pub_year.items()))
+
+    # journal x period: every journal row and every period column reconciles
+    # against totals already checked elsewhere (journals, periods).
+    jp = collections.Counter()
+    for r in raw:
+        jp[(r["Journal"].strip(), period_of(pub_year[r["PAPER ID"].strip()]))] += 1
+    for j, jc in stats["journals"].items():
+        check(f"journal x period row total, {j}",
+              sum(v for (jj, _p), v in jp.items() if jj == j), jc)
+    for p, pc in period_n.items():
+        check(f"journal x period column total, {p}",
+              sum(v for (_j, pp), v in jp.items() if pp == p), pc)
+    check("journal x period grand total", sum(jp.values()), 109)
+
+    # cluster x period: each cluster's row sums to that cluster's own n
+    # (already verified independently in section 5).
+    for name, cols in CL.items():
+        g = [r for r in raw if any(r[c].strip().upper().startswith("Y") for c in cols)]
+        cp = collections.Counter(period_of(pub_year[r["PAPER ID"].strip()]) for r in g)
+        check(f"cluster x period row total, {name}", sum(cp.values()),
+              stats["clusters"][name]["n"])
+
+    # method x period: each method's any-mention row sums to that method's
+    # own total in stats["methods"].
+    NAME_TO_CODE = {  # method_primary / method_secondary values map the same way
+        "Standard Econometrics Accounting / Market Data": "ECON",
+        "NLP / Textual Analysis": "NLP", "Satellite & Remote Sensing": "SAT",
+        "Survey Instrument": "SURV", "Experiment": "EXP",
+        "Regulatory Filing Parsing": "FILE", "Machine Learning (non-NLP)": "ML",
+        "Meta-Analysis / Systematic Review": "META", "Other": "OTH",
+    }
+    method_any = collections.defaultdict(set)
+    for r in raw:
+        pid = r["PAPER ID"].strip()
+        for c in ("Method (primary)", "Method (secondary)"):
+            m = r[c].strip()
+            if m:
+                method_any[NAME_TO_CODE.get(m, "OTH")].add(pid)
+    for code, pids in method_any.items():
+        if code not in stats["methods"]:
+            continue
+        check(f"method x period row total, {code}", len(pids), stats["methods"][code]["n"])
+
+    # unit x cluster: each cluster's column sums to that cluster's own n, and
+    # each unit's row sums to the corpus-wide unit count already in stats.
+    for name, cols in CL.items():
+        g = [r for r in raw if any(r[c].strip().upper().startswith("Y") for c in cols)]
+        uc = collections.Counter(r["Unit of Observation"].strip() or "(unrecorded)" for r in g)
+        check(f"unit x cluster column total, {name}", sum(uc.values()),
+              stats["clusters"][name]["n"])
+    unit_totals = collections.Counter(
+        r["Unit of Observation"].strip() or "(unrecorded)" for r in raw)
+    check("unit x cluster row totals match corpus-wide unit counts",
+          dict(unit_totals), stats["unit"])
+
+    # source categories with licensing class: any-mention counts reconcile
+    # against the two licensing-classified sets, and against the derived
+    # table's own source_codes.
+    LICENSED_CATS = {"Proprietary Database", "Market Data",
+                      "Earnings Call transcripts", "News & Media"}
+    PUBLIC_CATS = {"Official Statistics", "SEC Filings", "Weather & Hazard",
+                    "Satellite Imagery", "CDP Reports"}
+    cat_any, cat_primary = collections.Counter(), collections.Counter()
+    for r in raw:
+        prim = r["Data Source (primary)"].strip()
+        sec = r["Data Source (secondary)"].strip()
+        if prim:
+            cat_primary[prim] += 1
+        for cat in {prim, sec} - {""}:
+            cat_any[cat] += 1
+    for cat, v in stats["source_categories"].items():
+        check(f"source category any-mention, {cat}", cat_any.get(cat, 0), v["any"])
+        check(f"source category primary, {cat}", cat_primary.get(cat, 0), v["primary"])
+        want_class = ("licensed" if cat in LICENSED_CATS
+                      else "public" if cat in PUBLIC_CATS else "neither")
+        check(f"source category class, {cat}", v["class"], want_class)
+    check("total source mentions",
+          sum(cat_any.values()), sum(v["any"] for v in stats["source_categories"].values()))
+
+    # data x code cross-tabulation: row and column totals reconcile against
+    # the already-verified marginal distributions (data_levels / code_levels).
+    dc = collections.Counter()
+    for r in raw:
+        d = r["Data Publicly Available? (Y/N/Partial)"].strip()
+        c = r["Replication Code? (Y/N/Partial)"].strip()
+        dc[(d, c)] += 1
+    for d, row in stats["data_code_matrix"].items():
+        check(f"data x code row total, {d}", sum(v for (dd, _c), v in dc.items() if dd == d),
+              sum(row.values()))
+    for c in ("Y", "Partial", "On Demand", "N"):
+        col_total = sum(v for (_d, cc), v in dc.items() if cc == c)
+        want = sum(row.get(c, 0) for row in stats["data_code_matrix"].values())
+        check(f"data x code column total, {c}", col_total, want)
+    check("data x code grand total", sum(dc.values()), 109)
+
     print(f"\n{CHECKS[0]} checks run.")
     if FAILS:
         print(f"\n{len(FAILS)} FAILED:")

@@ -7,6 +7,7 @@
     "data_description": "CSR ratings from 23000 companies from 114 countries",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.12487",
     "publication_year": 2017,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Ratings",
       "Topic: Social Factors",
@@ -61,6 +62,7 @@
     "data_description": "performance and CSR ratings non financial firms during financial crisis",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.12505",
     "publication_year": 2017,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Ratings",
       "Topic: Social Factors",
@@ -116,6 +118,7 @@
     "data_description": "adminstrative data linked to survey and behavioural experiment",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.12547",
     "publication_year": 2017,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -171,6 +174,7 @@
     "data_description": "Fund flow data after intoduction of sailent Sustainability rating",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.12841",
     "publication_year": 2019,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Ratings"
     ],
@@ -221,6 +225,7 @@
     "data_description": "Firm-level panel of climate-change exposure measures built on earning calls keywords",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13219",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Climate Transition Risk",
@@ -276,6 +281,7 @@
     "data_description": "Cross-section of carbon premia in global stock returns.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13272",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Green Bonds & Sustainable Debt"
@@ -329,6 +335,7 @@
     "data_description": "Cross-sectional carbon return estimates accounting for emissions data release lags, built from S&P Trucost Scope 1/2 emissions merged with CRSP/Compustat (US) and Compustat Global, covering ~14,400 firms in 77 countries, 2009–2021.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13402",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -380,6 +387,7 @@
     "data_description": "Firm-level analysis of stock and options market reactions to hurricane events, built from NOAA hurricane forecasts, FEMA disaster declarations, NETS firm establishment data, OptionMetrics, CRSP, and earnings call transcripts, covering Atlantic/Gulf hurricane events 1996–2019.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13416",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -430,6 +438,7 @@
     "data_description": "Plant-level dataset of 888 industrial divestitures linking SDC M&A deals with EPA Toxic Release Inventory pollution data, NETS plant employment, and KLD/Refinitiv/MSCI ESG ratings, covering US firms 2000–2020.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13412",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -485,6 +494,7 @@
     "data_description": "Firm-month panel matching RepRisk negative ESG incidents to IBES analyst earnings forecast revisions to test whether analysts revise forecasts after ESG news, covering global public firms 2008–2019.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13498",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors",
@@ -539,6 +549,7 @@
     "data_description": "Fund-level analysis of strategic timing of ESG holdings around mandatory disclosure dates, built from CRSP mutual funds, Morningstar/Sustainalytics sustainability ratings, and Trucost emissions, covering 223 ESG and 5,793 non-ESG US equity mutual funds, March 2016 – December 2022.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.13499",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -590,6 +601,7 @@
     "data_description": "State–insurer–year panel of US homeowners insurance underwriting and rate filings, built from S&P Market Intelligence (premiums, losses, balance sheets), Insure.com homeowners premiums, and NAIC regulatory filings; uses IV and border-discontinuity designs to identify regulatory effects on rates.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.70029",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Climate Transition Risk"
@@ -642,6 +654,7 @@
     "data_description": "Custom survey of consumer and worker substitution patterns combined with structural product- and labor-market models to estimate the welfare loss if a firm exited, applied to 74 firms across 12 industries.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.70004",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -692,6 +705,7 @@
     "data_description": "Firm-level panel linking institutional ownership (13F filings) with firm-level ESG ratings and ES incidents, testing whether long-horizon investors prefer high-ESG firms and react differently to negative ES events vs. earnings news.",
     "paper_link": "https://onlinelibrary.wiley.com/doi/10.1111/jofi.70008",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -749,6 +763,7 @@
     "data_description": "Long-short equity portfolios built from Fortune's '100 Best Companies to Work For in America' list (an employee-satisfaction proxy) merged with stock returns, testing whether the market fully prices intangible human-capital value.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2011.03.021",
     "publication_year": 2011,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -799,6 +814,7 @@
     "data_description": "County/ZIP-level study of whether payday-lender access mitigates financial distress (foreclosures, larcenies) after natural disasters, combining hand-collected payday-lender locations with FEMA disaster declarations and property/foreclosure data in California.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2011.03.022",
     "publication_year": 2011,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -851,6 +867,7 @@
     "data_description": "Study of whether US mutual-fund managers' personal political affiliation (from FEC campaign-contribution records) is reflected in portfolio tilts away from socially-irresponsible ('sin'/low-KLD) stocks, linking FEC donations, fund holdings, and KLD social ratings.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2011.01.006",
     "publication_year": 2012,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -903,6 +920,7 @@
     "data_description": "Event study of acquirer CSR (KLD) and merger outcomes — announcement returns, deal completion, and long-run performance — testing the stakeholder-value-maximization view, using KLD CSR ratings, SDC M&A deals, and CRSP returns.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2013.04.014",
     "publication_year": 2013,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -954,6 +972,7 @@
     "data_description": "Study of whether firms' political leanings (from employee/executive FEC donations and founder/location proxies) predict higher CSR scores, linking KLD CSR ratings, FEC political donations, and Compustat financials.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2013.10.002",
     "publication_year": 2014,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -1005,6 +1024,7 @@
     "data_description": "Event study of stock-market reactions to corporate social-responsibility news, using KLD CSR strengths/concerns events matched to CRSP returns; finds investors respond negatively to some CSR and positively to offsetting/agency-reducing CSR.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2014.09.008",
     "publication_year": 2015,
+    "period": "2011–2015",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -1054,6 +1074,7 @@
     "data_description": "International study of whether CSR is driven by managerial agency problems, showing well-governed firms engage in more CSR, using Thomson Reuters ASSET4 ESG/CSR scores combined with governance and financial data across countries.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2015.12.003",
     "publication_year": 2016,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -1105,6 +1126,7 @@
     "data_description": "Study of how multi-market banks reallocate capital after local natural disasters, raising lending in disaster areas while contracting elsewhere, using FEMA disaster declarations, HMDA mortgage data, and bank Call Reports.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2017.04.011",
     "publication_year": 2017,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -1153,6 +1175,7 @@
     "data_description": "Study showing CEOs with daughters run firms with higher CSR (especially diversity), combining KLD CSR ratings with hand-collected data on S&P 500 executives' children and gender.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2017.09.003",
     "publication_year": 2017,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -1204,6 +1227,7 @@
     "data_description": "International evidence that institutional ownership raises firms' environmental and social (E&S) performance, using Thomson Reuters ASSET4 E&S scores and institutional-ownership data across many countries; identification via index/quasi-natural-experiment variation.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2018.08.013",
     "publication_year": 2019,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors",
@@ -1258,6 +1282,7 @@
     "data_description": "Hedonic study showing homes exposed to projected sea-level rise sell at a discount (~7%), combining Zillow ZTRAX property transactions with NOAA sea-level-rise and elevation data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2019.03.013",
     "publication_year": 2019,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -1308,6 +1333,7 @@
     "data_description": "Study showing US counties more exposed to climate change / sea-level rise pay higher underwriting fees and yields on long-term municipal bonds, combining municipal-bond issuance data with climate-change and sea-level-rise exposure projections.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2019.06.006",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Green Bonds & Sustainable Debt"
@@ -1361,6 +1387,7 @@
     "data_description": "Causal study using Russell 1000/2000 index-reconstitution discontinuities as exogenous variation in institutional ownership to show institutions increase firms' CSR, linking MSCI/KLD CSR ratings, Russell index membership, and 13F ownership.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2019.06.007",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors",
@@ -1415,6 +1442,7 @@
     "data_description": "Study of venture-capital impact funds showing investors accept lower expected returns for measurable social impact (a revealed willingness-to-pay), using Preqin VC/PE fund data with hand-classified impact vs traditional funds.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2020.07.008",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -1464,6 +1492,7 @@
     "data_description": "Study showing prices of weather (temperature) futures embed market expectations of warming consistent with climate-model trends, combining CME weather-derivative prices with NOAA station temperature records and climate-model projections.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2020.08.019",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -1514,6 +1543,7 @@
     "data_description": "Analysis of how impact is contractually implemented in private funds, using a hand-collected sample of impact-investing fund partnership agreements/side letters to document governance and impact-measurement provisions.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.01.006",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Social Factors",
       "Topic: Governance"
@@ -1565,6 +1595,7 @@
     "data_description": "Asset-pricing study showing US stocks of higher-carbon-emitting firms earn higher returns (a carbon premium), and that some investors divest on carbon intensity, using Trucost carbon emissions (Scope 1/2/3) merged with CRSP/Compustat.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.05.008",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -1616,6 +1647,7 @@
     "data_description": "Supply-chain study showing large customers' CSR propagates to their suppliers' CSR, combining customer-supplier links (Compustat segment / FactSet Revere) with ESG/CSR ratings for an international sample.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2020.01.003",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -1665,6 +1697,7 @@
     "data_description": "Study of corporate green-bond issuance showing positive stock-market reactions and real effects (improved environmental performance, more green innovation, green-investor clientele), using Bloomberg green-bond data with CRSP/Compustat and environmental ratings.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.01.010",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Green Bonds & Sustainable Debt",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -1717,6 +1750,7 @@
     "data_description": "International study showing Big Three (BlackRock, Vanguard, State Street) ownership and engagement are associated with subsequent reductions in investee carbon emissions, combining Trucost emissions, Big Three ownership (FactSet), and engagement data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.05.007",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Corporate Emissions (Scope 1/2/3)",
@@ -1772,6 +1806,7 @@
     "data_description": "Develops the ESG-efficient frontier — the best risk-return trade-off attainable at each ESG level — and characterizes optimal portfolios for ESG-motivated and ESG-aware investors, with an empirical implementation using ESG scores and market data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2020.11.001",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -1824,6 +1859,7 @@
     "data_description": "Study of California's cap-and-trade program showing financially constrained firms shift emissions and activity to plants in other states (within-firm leakage/spillovers), using EPA plant-level emissions, the California program, and Compustat financials.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.06.015",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -1875,6 +1911,7 @@
     "data_description": "Study showing social interactions affect households' flood-insurance take-up, combining FEMA National Flood Insurance Program (NFIP) policy data with flood events and social-connectedness proxies.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2022.02.004",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -1928,6 +1965,7 @@
     "data_description": "Equilibrium asset-pricing model with uncertainty about firms' ESG ratings (rating disagreement), with empirical tests linking ESG-rating disagreement to the carbon/ESG premium and demand, using multiple ESG raters and market data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.09.009",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -1980,6 +2018,7 @@
     "data_description": "Shows that green US stocks outperformed brown over 2012-2020 largely because of unexpected increases in climate concern (not high expected returns), decomposing realized green returns using MSCI environmental scores, returns, and climate-concern shocks.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2022.07.007",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Ratings"
@@ -2032,6 +2071,7 @@
     "data_description": "Study of Hurricane Harvey showing financial distress concentrated among lower-income flooded households while aid distribution favored higher-income areas, combining a consumer credit-bureau panel, FEMA/SBA disaster aid, and flood-depth data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2021.11.006",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -2085,6 +2125,7 @@
     "data_description": "Shows Republicans are relatively more willing to buy sea-level-rise-exposed coastal homes (partisan sorting on climate beliefs), combining Zillow ZTRAX transactions, voter-registration party data, and NOAA sea-level-rise exposure.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2022.03.004",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -2138,6 +2179,7 @@
     "data_description": "Study of Morningstar sustainability ('globe') ratings showing fund managers tilt holdings to improve ratings and that ratings drive fund flows, using Morningstar globe ratings with mutual-fund flows and holdings.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103831",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -2189,6 +2231,7 @@
     "data_description": "Estimates the risk and return of impact-investing funds using fund cash-flow data and public-market-equivalent / benchmark methods, characterizing how impact funds' returns compare with conventional VC/PE and public markets.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103928",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Social Factors"
     ],
@@ -2238,6 +2281,7 @@
     "data_description": "Empirical study of sustainability-linked bonds (SLBs), whose coupons step up if ESG/KPI targets are missed, examining their pricing, greenium, and target-setting, using SLB issuance and pricing data (Bloomberg/Refinitiv).",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103944",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Green Bonds & Sustainable Debt"
     ],
@@ -2287,6 +2331,7 @@
     "data_description": "Incentivized experiment eliciting investors' moral/social preferences — their willingness to pay (or sacrifice return) for firms' ethical behavior — using a controlled online experiment with real monetary stakes.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103955",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors"
@@ -2338,6 +2383,7 @@
     "data_description": "Theoretical and quantitative analysis arguing that the cost-of-capital impact of divestment/impact investing on targeted firms is small under realistic conditions; primarily a model with calibration rather than a novel dataset.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103972",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Social Factors"
@@ -2390,6 +2436,7 @@
     "data_description": "Documents four facts about retail investors' ESG beliefs and how they relate to portfolio holdings, combining a large survey of Vanguard investors with their administrative portfolio-holding data.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103984",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -2442,6 +2489,7 @@
     "data_description": "Introduces biodiversity finance — using private and blended capital to fund conservation/restoration — with a conceptual framework on 'monetizing' biodiversity and empirical evidence from deal-level data of a leading biodiversity-finance institution, supporting a three-dimensional (return, risk, biodiversity) efficient frontier.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2024.103987",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Biodiversity & Nature"
     ],
@@ -2491,6 +2539,7 @@
     "data_description": "Introduces CRISK, a market-based measure of the expected capital shortfall of banks in a climate stress scenario (a climate analogue to SRISK), estimated from bank equity/market data and a climate risk factor.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104076",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk"
     ],
@@ -2540,6 +2589,7 @@
     "data_description": "Uses bank coal-exit policies as a laboratory to show divestment has large real effects: targeted coal assets face reduced financing and are more likely to retire, cutting CO2 emissions by an estimated ~0.62-1 gigaton; built from hand-collected bank exit policies, the Global Coal Exit List, coal-plant data, and syndicated loans.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104129",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Green Bonds & Sustainable Debt",
@@ -2594,6 +2644,7 @@
     "data_description": "Studies the costs and benefits of responsible/ESG investing for US university endowment funds, relating endowments' responsible-investing adoption to their asset allocation and returns, using endowment survey/filing data and returns.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104151",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors"
@@ -2646,6 +2697,7 @@
     "data_description": "Empirical study of ESG/sustainability-linked lending — loans whose pricing is tied to borrowers' ESG performance targets — examining their design, pricing, and incentive effects, using DealScan syndicated-loan data with ESG ratings.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104150",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Green Bonds & Sustainable Debt"
@@ -2697,6 +2749,7 @@
     "data_description": "Measures institutional investors' 'green tilts' — the degree to which their equity holdings are tilted toward greener stocks — and how these tilts have grown and vary across institution types, using 13F holdings and MSCI green/environmental scores.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104173",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Ratings"
@@ -2749,6 +2802,7 @@
     "data_description": "Shows that heightened (climate/economic) policy uncertainty reduces firms' green innovation, measured by green patents, linking green-patent data to a policy-uncertainty index and firm characteristics.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104189",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk"
     ],
@@ -2798,6 +2852,7 @@
     "data_description": "Exploits the 'twin' structure of German sovereign green and conventional bonds (2009-2023) and a dynamic no-arbitrage term-structure model to estimate a time-varying greenium driven solely by investors' green values, distinct from the raw green spread.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2025.104217",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Green Bonds & Sustainable Debt"
     ],
@@ -2847,6 +2902,7 @@
     "data_description": "Uses the UK Minimum Energy Efficiency Standard (requiring rented properties to meet minimum energy-efficiency ratings) in an instrumented difference-in-differences design to show the regulation triggers low-cost retrofits, with little pass-through to rents; built on a large sample of residential Energy Performance Certificate (EPC) records.",
     "paper_link": "https://doi.org/10.1016/j.jfineco.2026.104236",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -2898,6 +2954,7 @@
     "data_description": "Firm-level analysis testing whether E&S-conscious institutional investors' divestitures and exit threats induce changes in firms' E&S policies, built from RepRisk ESG incidents linked to FactSet/13F institutional holdings, executive compensation data, and ESG ratings, covering global firms.",
     "paper_link": "https://doi.org/10.1093/rof/rfac029",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -2955,6 +3012,7 @@
     "data_description": "Theoretical extension of CAPM incorporating sustainable preferences (exclusionary screening and ESG integration), with empirical calibration of sin-stock and green premia using US equity returns and ESG/sin classifications.",
     "paper_link": "https://doi.org/10.1093/rof/rfac045",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Ratings"
@@ -3008,6 +3066,7 @@
     "data_description": "Loan-level US residential mortgage panel testing whether lenders price sea-level-rise (SLR) exposure, built from HMDA mortgage applications matched to NOAA SLR risk data and property location data, covering US originations 2018–2020.",
     "paper_link": "https://doi.org/10.1093/rof/rfac013",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -3058,6 +3117,7 @@
     "data_description": "Hedge fund-level panel testing whether UN PRI signatory hedge funds outperform and behave more responsibly, built from a major commercial hedge fund database (e.g., HFR, TASS, Eurekahedge) merged with UN PRI signatory list and SEC ADV filings.",
     "paper_link": "https://doi.org/10.1093/rof/rfac028",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -3110,6 +3170,7 @@
     "data_description": "Cross-rater comparison of ESG ratings from six providers (KLD, Sustainalytics, Moody's ESG/Vigeo-Eiris, S&P Global/RobecoSAM, Refinitiv/Asset4, MSCI), decomposing pairwise rating divergence into scope, measurement, and weight contributions using a common taxonomy of indicators; baseline year 2014.",
     "paper_link": "https://doi.org/10.1093/rof/rfac033",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -3161,6 +3222,7 @@
     "data_description": "Institutional investor-level analysis testing whether UN PRI signatories actually hold portfolios with better ESG profiles, built from FactSet/13F institutional holdings linked to UN PRI signatory data, MSCI ESG ratings, and Sustainalytics ratings, covering global institutional investors.",
     "paper_link": "https://doi.org/10.1093/rof/rfac064",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -3212,6 +3274,7 @@
     "data_description": "Fund- and firm-level analysis testing whether SRI mutual fund holdings cause changes in firm pollution, board diversity, employee satisfaction, and workplace safety, built from CRSP mutual funds + Morningstar SRI classifications, EPA TRI pollution data, BoardEx, Glassdoor employee data, OSHA workplace safety, and shareholder proposal data, covering US firms.",
     "paper_link": "https://doi.org/10.1093/rof/rfad002",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -3271,6 +3334,7 @@
     "data_description": "Re-examination of carbon-return correlations distinguishing vendor-estimated vs firm-disclosed emissions, built from S&P Trucost emissions (with estimated/disclosed flag) merged with CRSP/Compustat returns and accounting data, covering US firms (with European validation), 2005–2019.",
     "paper_link": "https://doi.org/10.1093/rof/rfad013",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -3322,6 +3386,7 @@
     "data_description": "Firm-level panel testing whether ESG shareholder engagements reduce downside risk (VaR, lower partial moments), built from a proprietary ESG engagement database from a large institutional investor (Federated Hermes) linked to CRSP/Compustat returns and RepRisk environmental incidents.",
     "paper_link": "https://doi.org/10.1093/rof/rfad034",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Disclosure",
@@ -3381,6 +3446,7 @@
     "data_description": "Cross-country panel measuring climate transition risk spillovers among six major financial markets (US, Japan, China, plus three others), built from listed-firm equity returns and transition-risk shock proxies (e.g., carbon-intensive vs green portfolio returns), 2013–2021.",
     "paper_link": "https://doi.org/10.1093/rof/rfad026",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk"
     ],
@@ -3430,6 +3496,7 @@
     "data_description": "Theoretical model of corporate employee charitable matching grant schemes as a coordination device for public-good giving, motivated by US corporate giving statistics ($20.77B in 2017) and matching-grant prevalence among S&P 1500 firms; no novel empirical dataset.",
     "paper_link": "https://doi.org/10.1093/rof/rfad039",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors",
@@ -3483,6 +3550,7 @@
     "data_description": "Firm-level panel testing whether investors price corporate biodiversity exposure, built around the Corporate Biodiversity Footprint (CBF) measure from Iceberg Data Lab — aggregating biodiversity loss from land use, GHG emissions, water and air pollution — merged with CRSP/Compustat returns and accounting data.",
     "paper_link": "https://doi.org/10.1093/rof/rfae010",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Biodiversity & Nature",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -3535,6 +3603,7 @@
     "data_description": "Mutual fund-level analysis of strategic voting on environmental and social shareholder proposals, built from N-PX proxy voting filings, ISS Voting Analytics, CRSP/Morningstar mutual fund data, and Morningstar ESG fund classifications.",
     "paper_link": "https://doi.org/10.1093/rof/rfae017",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -3589,6 +3658,7 @@
     "data_description": "Firm-level regression discontinuity design exploiting close labor union elections (NLRB) to identify causal effects of unionization on internal vs external E&S scores, merged with KLD/MSCI ESG ratings and CRSP/Compustat data, covering US firms.",
     "paper_link": "https://doi.org/10.1093/rof/rfae018",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -3645,6 +3715,7 @@
     "data_description": "Mutual fund-level analysis of 357,649 votes on environmental shareholder proposals, testing whether hurricane exposure at fund headquarter location increases support for E proposals; built from SEC N-PX filings, ISS Voting Analytics, NOAA hurricane data, and FEMA disaster declarations, covering US 2006–2020.",
     "paper_link": "https://doi.org/10.1093/rof/rfaf003",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: ESG Disclosure"
@@ -3697,6 +3768,7 @@
     "data_description": "Event-study of stock market reactions to 1,162 disaster relief donation announcements by publicly listed firms globally, computing cumulative abnormal returns (CARs) in narrow event windows, 2006–2018.",
     "paper_link": "https://doi.org/10.1093/rof/rfaf007",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -3749,6 +3821,7 @@
     "data_description": "Theoretical model with mean-variance foreign investors disinclined to hold brown bonds, plus empirical test using a global bond market dataset to show green premia are smaller in economies with more closed financial accounts and more volatile exchange rates.",
     "paper_link": "https://doi.org/10.1093/rof/rfaf024",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Green Bonds & Sustainable Debt"
@@ -3802,6 +3875,7 @@
     "data_description": "Theoretical model of regulator-firm strategic interactions plus firm-level empirical analysis of China's blockchain-based environmental monitoring system, using monitored emissions/pollution data and firm-level outcomes; identifies effects on industrial pollution, business relocation, and other socioeconomic outcomes.",
     "paper_link": "https://doi.org/10.1093/rof/rfaf033",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Corporate Emissions (Scope 1/2/3)"
     ],
@@ -3852,6 +3926,7 @@
     "data_description": "Property-level panel of more than 58 million US real estate transactions linking transaction prices to local biodiversity measures from CSIRO and regional species richness from NatureServe, decomposing local vs regional biodiversity effects on property values, 2000–2021.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/391/8286335#548122822",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Biodiversity & Nature"
@@ -3904,6 +3979,7 @@
     "data_description": "Commodity-level panel testing whether biodiversity-related transition risk is priced in global commodity markets (especially agricultural), built from species-loss-per-harvested-land intensity metrics combined with Bloomberg/futures commodity price data; includes Kunming Declaration event study and aggregate cross-section asset pricing analysis.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/351/8316107",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature"
@@ -3956,6 +4032,7 @@
     "data_description": "Firm-level analysis of voluntary carbon offset purchases targeting rainforest/forest projects, built from voluntary carbon market registries (Verra/Gold Standard) merged with global firm financials and emissions data, testing investor responses to firms' voluntary biodiversity-relevant offset disclosures.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/321/8362620",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Disclosure",
@@ -4013,6 +4090,7 @@
     "data_description": "Project- and country-level analysis of EU biodiversity science and innovation funding (CORDIS Horizon 2020 / Horizon Europe), with funding allocations across UK (€695.12M, 16% of total), Norway (€386.30M), Portugal (€223.02M) and others, decomposed by ecosystem (terrestrial/marine/freshwater/subterranean); tests whether funding actually reduces biodiversity loss outcomes.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/273/8315367",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Biodiversity & Nature"
     ],
@@ -4061,6 +4139,7 @@
     "data_description": "Firm-level panel introducing new \"NatureDep\" measures of corporate dependence on ecosystem services (built by mapping industry-level nature dependence to firms via NACE/GICS codes), merged with CRSP/Compustat or international equivalents and tested for asset-pricing implications.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/231/8316106",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Biodiversity & Nature"
@@ -4113,6 +4192,7 @@
     "data_description": "Firm-level panel testing how the designation of new protected areas — motivated by the COP15 Kunming-Montreal \"30 by 30\" target — affects corporate behavior and financial performance for firms operating near newly protected ecosystems, built from World Database on Protected Areas (WDPA) merged with global firm-level financials.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/193/8304741",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature"
@@ -4165,6 +4245,7 @@
     "data_description": "Multi-source biodiversity risk dataset: aggregate news-based biodiversity risk index from NYT and other media; firm- and industry-level exposure measures from (1) textual analysis of 10-K filings, (2) holdings of biodiversity-related funds, (3) firms' CDP questionnaire responses, and (4) a large survey of finance professionals/regulators/academics.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/131/8307061",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature"
@@ -4218,6 +4299,7 @@
     "data_description": "Property-level panel testing whether mangrove ecosystem services are capitalized into coastal housing prices, built from real estate transaction data linked to mangrove coverage maps (likely Global Mangrove Watch or NASA satellite data) and storm/hurricane hazard exposure data.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/87/8304747",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature"
@@ -4271,6 +4353,7 @@
     "data_description": "Startup-level analysis of 630 biodiversity-linked startups identified by fine-tuning a large language model (LLM) on PitchBook venture data, comparing financing dynamics with non-biodiversity ventures and analyzing the role of Twitter/X social media activity in attracting \"value\" vs \"values\" investors.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/43/8303924",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Biodiversity & Nature"
     ],
@@ -4321,6 +4404,7 @@
     "data_description": "Firm-level panel of corporate nature/biodiversity risk perceptions constructed via NLP analysis of earnings call transcripts (and likely 10-K filings), separating physical from transition nature risks, merged with firm financial and market data.",
     "paper_link": "https://academic.oup.com/rof/article/30/1/11/8322449",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Climate Transition Risk",
@@ -4376,6 +4460,7 @@
     "data_description": "Individual-level information-provision experiment embedded in a German Bundesbank household survey, testing causal effects of climate-information treatments on willingness to pay for CO2 offsets, willingness to invest in green assets, and downstream information-acquisition behavior.",
     "paper_link": "https://academic.oup.com/rof/article/30/2/571/8381550",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature",
@@ -4431,6 +4516,7 @@
     "data_description": "Project-level analysis of ~30,000 voluntary carbon offset projects (~2,700 with mapped spatial boundaries) and 419,000+ credit retirements, linking registry records (Verra, Gold Standard, etc.) to satellite-derived habitat indicators (Human Influence Index, Biodiversity Habitat Index, BERI) to test claimed biodiversity co-benefits.",
     "paper_link": "https://academic.oup.com/rof/article/30/2/537/8317468",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Biodiversity & Nature"
@@ -4484,6 +4570,7 @@
     "data_description": "Firm-level panel constructing new measures of green innovation that capture commercialization and adoption (not just patent invention), built via NLP/textual analysis of corporate disclosures and other text sources, merged with patent data and standard firm financials.",
     "paper_link": "https://academic.oup.com/rof/article/30/2/423/8304746",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -4536,6 +4623,7 @@
     "data_description": "Firm-level comparison of toxic/greenhouse pollution by public vs private US firms, built from EPA emissions data (Greenhouse Gas Reporting Program, Toxic Release Inventory) linked to firm ownership and financial data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhz079",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Corporate Emissions (Scope 1/2/3)",
       "Topic: Governance"
@@ -4588,6 +4676,7 @@
     "data_description": "Property-level study of whether US coastal house prices reflect climate-change beliefs, pairing real-estate transaction data with local climate-opinion measures (Yale Climate Opinion Maps) and sea-level-rise/flood exposure; includes an equilibrium housing-sorting model.",
     "paper_link": "https://doi.org/10.1093/rfs/hhz073",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -4638,6 +4727,7 @@
     "data_description": "Property-level study comparing coastal home prices by inundation threshold under sea-level-rise projections, built from a comprehensive coastal home-sales database merged with NOAA elevation-relative-to-tide data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhz134",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -4687,6 +4777,7 @@
     "data_description": "Construction of climate-change news indices via textual analysis of newspapers (WSJ and a Crimson Hexagon news corpus), then mimicking-portfolio hedge construction disciplined by third-party ESG scores; authors publicly release the climate news series.",
     "paper_link": "https://doi.org/10.1093/rfs/hhz072",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Disclosure"
@@ -4740,6 +4831,7 @@
     "data_description": "International study linking abnormally warm local temperatures to climate-change attention (Google search volume) and to underperformance of carbon-intensive stocks, combining Google Trends, weather/temperature data, and equity returns.",
     "paper_link": "https://doi.org/10.1093/rfs/hhz086",
     "publication_year": 2020,
+    "period": "2016–2020",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Climate Transition Risk"
@@ -4792,6 +4884,7 @@
     "data_description": "Firm-level study showing option-implied downside tail risk is larger for carbon-intensive firms, combining OptionMetrics option prices, firm carbon intensity (vendor emissions), and climate-attention proxies.",
     "paper_link": "https://doi.org/10.1093/rfs/hhaa071",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -4843,6 +4936,7 @@
     "data_description": "Estimates the term structure of discount rates for very-long-horizon (climate) payoffs by exploiting the price gap between leasehold and freehold residential properties, using UK Land Registry transactions and Singapore housing data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhab032",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Green Bonds & Sustainable Debt"
@@ -4895,6 +4989,7 @@
     "data_description": "Field experiment with real financial stakes among members of a Dutch pension fund, combining an incentivized vote and surveys to measure individuals' preferences for sustainable investments.",
     "paper_link": "https://doi.org/10.1093/rfs/hhab037",
     "publication_year": 2021,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: Social Factors"
@@ -4947,6 +5042,7 @@
     "data_description": "Time-varying analysis of SRI abnormal returns over the business cycle, using portfolio regressions and event studies on analyst ESG ratings, firm announcements, and realized ESG incidents linked to market data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhab072",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings"
@@ -4998,6 +5094,7 @@
     "data_description": "Loan-level study showing banks lend to borrowers with similar ESG profiles and influence borrowers' subsequent ESG performance, combining DealScan syndicated-loan data with bank and borrower ESG ratings and financials.",
     "paper_link": "https://doi.org/10.1093/rfs/hhab125",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -5052,6 +5149,7 @@
     "data_description": "Dynamic housing-market model plus a door-to-door survey in Rhode Island measuring flood-risk beliefs, combined with coastal property transactions and FEMA flood-risk maps to study capitalization of flood risk.",
     "paper_link": "https://doi.org/10.1093/rfs/hhab122",
     "publication_year": 2022,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -5102,6 +5200,7 @@
     "data_description": "Study of how natural-disaster (storm) exposure affects household human-capital investment, combining FEMA disaster declarations with individual-level education/financial-aid and credit-bureau data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad003",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Social Factors"
@@ -5155,6 +5254,7 @@
     "data_description": "Survey of institutional investors plus observational holdings analysis showing investors value and demand climate-risk disclosure, linking the survey to 13F holdings and CDP climate-disclosure data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad002",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: ESG Disclosure"
@@ -5208,6 +5308,7 @@
     "data_description": "Machine-learning textual analysis identifying partisan phrases (e.g., \"red tape,\" \"climate change\") in Congress and measuring their usage by SEC Commissioners and Federal Reserve Governors, 1930-2019.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad029",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Governance"
     ],
@@ -5256,6 +5357,7 @@
     "data_description": "Study of whether municipal-bond yields price sea-level-rise exposure, combining municipal-bond transaction/yield data with property-level sea-level-rise exposure measures (Climate Central / NOAA).",
     "paper_link": "https://doi.org/10.1093/rfs/hhad041",
     "publication_year": 2023,
+    "period": "2021–2023",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Green Bonds & Sustainable Debt"
@@ -5309,6 +5411,7 @@
     "data_description": "Estimates the effect of carbon-pricing policy on bank credit to emitting firms, exploiting geographic restrictions in California's cap-and-trade program and a free-permit-threshold discontinuity in the federal Waxman-Markey bill, using syndicated-loan, EPA emissions, and regulatory data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad085",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Green Bonds & Sustainable Debt",
@@ -5363,6 +5466,7 @@
     "data_description": "Study of how supplier heat exposure reduces supplier and customer operating income and triggers supplier-relationship termination, combining FactSet Revere supply-chain links with firm financials and local temperature/heat-exposure data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad093",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -5413,6 +5517,7 @@
     "data_description": "Estimates the emission-to-carbon-price elasticity using a unique 26-year panel of CO2 emissions for Swedish manufacturing firms (administrative registers), exploiting Sweden's 1991 carbon tax and firm-level financial/abatement heterogeneity.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad097",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Transition Risk",
       "Topic: Corporate Emissions (Scope 1/2/3)"
@@ -5465,6 +5570,7 @@
     "data_description": "Replication/comment re-examining Ouazad & Kahn (2022): correcting the FHFA conforming-loan-limit construction reverses the original adverse-selection result, finding no evidence that lenders transfer climate risk via loan origination/securitization. Built from HMDA mortgage data, FHFA conforming loan limits, flood-zone designations, and GSE securitization data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad072",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk"
     ],
@@ -5515,6 +5621,7 @@
     "data_description": "Constructs firm-level physical and transition climate-risk measures via textual analysis of earnings-call transcripts using purpose-built dictionaries, and links them to firms' proactive climate responses and financials.",
     "paper_link": "https://doi.org/10.1093/rfs/hhad094",
     "publication_year": 2024,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Climate Transition Risk"
@@ -5568,6 +5675,7 @@
     "data_description": "Compares ESG mutual funds with similar ESG holdings but different incentives to engage, showing \"committed\" ESG funds do more ESG information acquisition, longer-horizon investing, and more intense engagement with greater real impact; built from fund holdings, ESG fund classifications, and engagement/information-acquisition data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhaf084",
     "publication_year": 2025,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: ESG Disclosure",
       "Topic: ESG Ratings",
@@ -5622,6 +5730,7 @@
     "data_description": "Intermediary asset-pricing study of catastrophe (cat) bonds whose payoffs are linked to natural disasters, showing ~71% of cross-sectional variation in cat-bond expected returns is explained by a theoretically motivated measure of intermediaries' marginal utility; built from a security-level catastrophe-bond database with secondary-market trading data.",
     "paper_link": "https://doi.org/10.1093/rfs/hhaf055",
     "publication_year": 2026,
+    "period": "2024–2026",
     "topic_flags": [
       "Topic: Climate Physical Risk",
       "Topic: Green Bonds & Sustainable Debt"

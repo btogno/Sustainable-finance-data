@@ -154,6 +154,30 @@ OPENNESS_BAND = [
     (0.00, "closed"),
 ]
 
+# ---------------------------------------------------------------------------
+# Periodisation (documented in docs/CODEBOOK.md §6; used throughout Chapter 4
+# and Chapter 5 of the thesis for every period-by-period breakdown). Declared
+# once here so that every period table in the build — journal x period,
+# cluster x period, method x period — cuts the corpus the same way.
+# ---------------------------------------------------------------------------
+
+PERIOD_BOUNDS = [
+    (2011, 2015, "2011–2015"),
+    (2016, 2020, "2016–2020"),
+    (2021, 2023, "2021–2023"),
+    (2024, 2026, "2024–2026"),
+]
+PERIOD_ORDER = [label for _, _, label in PERIOD_BOUNDS]
+
+
+def period_of(year):
+    if year is None:
+        return None
+    for lo, hi, label in PERIOD_BOUNDS:
+        if lo <= year <= hi:
+            return label
+    return None
+
 
 def _flag(v):
     return v.strip().upper().startswith("Y")
@@ -283,6 +307,7 @@ def derive(rows):
                 "data_description": r["Description of data"].strip(),
                 "paper_link": r["Direct link"].strip(),
                 "publication_year": pub,
+                "period": period_of(pub),
                 "topic_flags": flags,
                 "topic_codes": [TOPIC_CODE[f] for f in flags],
                 "clusters": clusters,

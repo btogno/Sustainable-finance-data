@@ -182,10 +182,10 @@ descriptive.
 
 `method_primary` and `method_secondary` are coded separately, and the catalogue
 reports methods on an **any-mention** basis across both fields. This matters:
-counting primary methods alone understates satellite and remote sensing (2
+counting primary methods alone understates satellite and remote sensing (3
 papers primary, 14 any-mention), regulatory filing parsing (0 primary, 4
 any-mention) and market data (18 primary, 57 any-mention). The full table,
-including each method's mean openness, is generated into
+including each method's mean availability, is generated into
 [STATS.md](STATS.md) and should be cited from there rather than from here.
 
 Codes: `ECON` standard econometrics on accounting and market data · `NLP`
@@ -203,7 +203,7 @@ machine learning other than NLP · `META` meta-analysis or systematic review ·
 | `dataset_start_year`, `dataset_end_year` | First and last year of the study's sample. |
 | `coverage` | The two above, rendered as a range. The field to check before openness when hunting reusable data. |
 | `coverage_window_years` | `end − start + 1`. Median 13 years. |
-| `lag_years` | `publication_year − dataset_end_year`. Median 4, mean 4.5, maximum 14. |
+| `lag_years` | `publication_year − dataset_end_year`. Median 4, mean 4.4, maximum 14. |
 | `geographic_scope` | Scope of the **data**, not the authors' institutions: `US`, `Global`, `Europe`, `Asia-Pacific`, `Other / Regional`. |
 | `geographic_notes` | Free text where the scope needs qualification. |
 | `unit_of_observation` | `Firm-Year`, `Portfolio-Level`, `Asset-Level`, `Document-Level`, `Country-Year`, `Other`. |

@@ -2,7 +2,7 @@
 
 Every paper in the frozen corpus, whether or not it releases anything. Papers with no public data and no code are listed too. The openness rate of the field is only measurable against the whole population.
 
-Sorted by openness score, descending. Full citations are in [CITATIONS.md](CITATIONS.md); field definitions and scoring keys are in [CODEBOOK.md](CODEBOOK.md).
+Sorted by availability score, descending. Full citations are in [CITATIONS.md](CITATIONS.md); field definitions and scoring keys are in [CODEBOOK.md](CODEBOOK.md).
 
 **Availability.** `D:` data — `OPEN` constructed panel released · `PART` partly released · `RAW` public raw sources named, nothing released · `REQ` on request · `—` none. `C:` replication code, same scale. The score is the mean of the two; `T1`–`T7` marks the curation tier, defined in [CODEBOOK.md](CODEBOOK.md).
 

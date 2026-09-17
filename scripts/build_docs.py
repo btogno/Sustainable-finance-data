@@ -2,7 +2,7 @@
 build_docs.py — render the human-readable repository from the derived data.
 
 Reads  : data/sustfin_datasets.json, data/link_inventory.csv
-Writes : docs/CATALOGUE.md   one row per paper, all 109, sorted by openness
+Writes : docs/CATALOGUE.md   one row per paper, all 109, sorted by availability
          docs/CITATIONS.md   full verbatim citation for every paper ID
          docs/STATS.md       every headline figure, recomputed
          README.md           refreshes the block between the STATS markers
@@ -31,6 +31,52 @@ CLUSTER_ORDER = [
     "Social & Governance",
     "ESG Disclosure & Ratings",
 ]
+
+# Display order only. The period boundaries themselves are declared once, in
+# PERIOD_BOUNDS in derive.py, and every record's own `period` field is what
+# these tables actually group on.
+PERIOD_ORDER = ["2011–2015", "2016–2020", "2021–2023", "2024–2026"]
+
+UNIT_ORDER = [
+    "Firm-Year", "Other", "Portfolio-Level", "Asset-Level",
+    "Document-Level", "Country-Year", "(unrecorded)",
+]
+
+DATA_LEVEL_ORDER = ["Y", "Partial", "Raw Data", "On Demand", "N"]
+CODE_LEVEL_ORDER = ["Y", "Partial", "On Demand", "N"]
+
+JOURNAL_ORDER = [
+    "Journal of Finance",
+    "Journal of Financial Economics",
+    "Review of Financial Studies",
+    "Review of Finance",
+]
+
+# Raw data source categories, in the order Table 4.2 / 5.1a present them, with
+# the access class each carries. This mirrors LICENSED / PUBLIC in derive.py
+# and CODEBOOK.md §4, which is the canonical declaration of the classification
+# itself; duplicated here (as CLUSTER_ORDER and PRIMARY_TO_CODE already are)
+# so this file can render a table without importing derive.py.
+SOURCE_CATEGORY_ORDER = [
+    "Proprietary Database", "Market Data", "Official Statistics",
+    "Weather & Hazard", "Other", "Survey Data", "SEC Filings",
+    "Earnings Call transcripts", "News & Media", "Social Media",
+    "Satellite Imagery", "CDP Reports",
+]
+SOURCE_CLASS = {
+    "Proprietary Database": "licensed",
+    "Market Data": "licensed",
+    "Earnings Call transcripts": "licensed",
+    "News & Media": "licensed",
+    "Official Statistics": "public",
+    "SEC Filings": "public",
+    "Weather & Hazard": "public",
+    "Satellite Imagery": "public",
+    "CDP Reports": "public",
+    "Survey Data": "neither",
+    "Social Media": "neither",
+    "Other": "neither",
+}
 
 DATA_BADGE = {
     "Y": "`D:OPEN`",
@@ -209,6 +255,58 @@ def stats(recs, links):
                 mc[m] += 1
         s["cluster_methods"][c] = mc
 
+    # -----------------------------------------------------------------
+    # Six tables added for the restructured Chapters 4-5 (ported from
+    # Derived_tables_Ch4_Ch5_2026-09-16.md): journal x period, cluster x
+    # period, method x period, unit x cluster, source categories with their
+    # licensing class, and the data x code cross-tabulation. `make verify`
+    # independently recomputes each of these from the frozen corpus.
+    # -----------------------------------------------------------------
+
+    s["periods"] = collections.Counter(r["period"] for r in recs if r["period"])
+
+    s["journal_period"] = {}
+    for j, jv in s["journals"].items():
+        g = [r for r in recs if r["journal"] == j]
+        s["journal_period"][j] = collections.Counter(r["period"] for r in g if r["period"])
+
+    s["cluster_period"] = {}
+    for c in CLUSTER_ORDER:
+        g = [r for r in recs if c in r["clusters"]]
+        s["cluster_period"][c] = collections.Counter(r["period"] for r in g if r["period"])
+
+    s["method_period"] = {}
+    for code in METHOD_ORDER:
+        g = [r for r in recs if code in r["method_codes"]]
+        if not g:
+            continue
+        s["method_period"][code] = collections.Counter(r["period"] for r in g if r["period"])
+
+    s["unit_cluster"] = {}
+    for c in CLUSTER_ORDER:
+        g = [r for r in recs if c in r["clusters"]]
+        s["unit_cluster"][c] = collections.Counter(
+            r["unit_of_observation"] or "(unrecorded)" for r in g
+        )
+
+    s["source_categories"] = {}
+    for cat in SOURCE_CATEGORY_ORDER:
+        any_n = sum(
+            1 for r in recs
+            if cat in (r["source_primary"], r["source_secondary"])
+        )
+        primary_n = sum(1 for r in recs if r["source_primary"] == cat)
+        s["source_categories"][cat] = {
+            "any": any_n, "primary": primary_n, "class": SOURCE_CLASS[cat],
+        }
+
+    s["data_code_matrix"] = {
+        d: collections.Counter(
+            r["code_availability"] for r in recs if r["data_availability"] == d
+        )
+        for d in DATA_LEVEL_ORDER
+    }
+
     lags = [r["lag_years"] for r in recs if r["lag_years"] is not None]
     s["lag_median"], s["lag_mean"], s["lag_max"] = st.median(lags), mean(lags), max(lags)
     s["past_2023"] = sum(1 for r in recs if (r["dataset_end_year"] or 0) > 2023)
@@ -292,7 +390,7 @@ def catalogue(recs, links, s):
         "Papers with no public data and no code are listed too. The openness rate "
         "of the field is only measurable against the whole population.",
         "",
-        "Sorted by openness score, descending. Full citations are in "
+        "Sorted by availability score, descending. Full citations are in "
         "[CITATIONS.md](CITATIONS.md); field definitions and scoring keys are in "
         "[CODEBOOK.md](CODEBOOK.md).",
         "",
@@ -463,7 +561,25 @@ def stats_md(s):
         "- Unit of observation: "
         + " · ".join(f"{k} {v}" for k, v in s["unit"].most_common()),
         "",
-        "## Openness",
+        "### Composition: journal × period",
+        "",
+        "| Journal | " + " | ".join(PERIOD_ORDER) + " | Total |",
+        "|---|" + "---:|" * (len(PERIOD_ORDER) + 1),
+    ]
+    for j in JOURNAL_ORDER:
+        row = s["journal_period"][j]
+        cells = [str(row.get(p, 0)) for p in PERIOD_ORDER]
+        o.append(f"| {j} | " + " | ".join(cells) + f" | **{s['journals'][j]}** |")
+    o.append(
+        "| **Total** | "
+        + " | ".join(f"**{s['periods'].get(p, 0)}**" for p in PERIOD_ORDER)
+        + f" | **{s['n']}** |"
+    )
+    o += [
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
+        "",
+        "## Availability",
         "",
         f"- Mean data score **{fmt(s['data_mean'])}**, mean code score "
         f"**{fmt(s['code_mean'])}**, mean composite **{fmt(s['open_mean'])}**.",
@@ -480,6 +596,29 @@ def stats_md(s):
         "data at all — code that cannot be executed.",
         "- Score distribution: "
         + " · ".join(f"{fmt(k)}: {v}" for k, v in sorted(s["score_hist"].items())),
+        "",
+        "### Data level × code level",
+        "",
+        "| data \\ code | " + " | ".join(CODE_LEVEL_ORDER) + " | Total |",
+        "|---|" + "---:|" * (len(CODE_LEVEL_ORDER) + 1),
+    ]
+    for d in DATA_LEVEL_ORDER:
+        row = s["data_code_matrix"][d]
+        cells = [str(row.get(c, 0)) for c in CODE_LEVEL_ORDER]
+        o.append(f"| {d} | " + " | ".join(cells) + f" | **{sum(row.values())}** |")
+    col_totals = [sum(s["data_code_matrix"][d].get(c, 0) for d in DATA_LEVEL_ORDER)
+                  for c in CODE_LEVEL_ORDER]
+    o.append("| **Total** | " + " | ".join(f"**{v}**" for v in col_totals)
+              + f" | **{sum(col_totals)}** |")
+    no_panel_code_y = sum(s["data_code_matrix"][d].get("Y", 0) for d in ("Raw Data", "N"))
+    panel_no_code = sum(v for k, v in s["data_code_matrix"]["Y"].items() if k != "Y")
+    o += [
+        "",
+        f"The off-diagonal carries the corpus's structure: **{no_panel_code_y}** "
+        "papers release code against no released panel (Raw Data or N on data), "
+        f"against **{panel_no_code}** releasing a panel (Y on data) with no code.",
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
         "",
         "## Curation tiers",
         "",
@@ -501,6 +640,32 @@ def stats_md(s):
         f"and 5 add {code_no_panel} papers that release code without a panel: not "
         "rerunnable, but the pipeline is documented.",
         "",
+        "## Raw data sources",
+        "",
+        "Counted on an any-mention basis across the primary and secondary source "
+        "fields; a category counts once for a paper naming it in either. Class is "
+        "the access-terms classification of CODEBOOK.md §4.",
+        "",
+        "| Source category | Any-mention | Primary | Class |",
+        "|---|---:|---:|---|",
+    ]
+    for cat in sorted(SOURCE_CATEGORY_ORDER,
+                       key=lambda c: -s["source_categories"][c]["any"]):
+        v = s["source_categories"][cat]
+        if v["any"] == 0:
+            continue
+        o.append(f"| {cat} | {v['any']} | {v['primary']} | {v['class']} |")
+    total_mentions = sum(v["any"] for v in s["source_categories"].values())
+    o += [
+        "",
+        f"{total_mentions} source mentions across {s['n']} papers. These counts "
+        "are a lower bound on named vendors: the free-text coding note records a "
+        "source category, not a systematic vendor field, so a paper using a given "
+        "source without the note recording it is not counted here. Per-paper "
+        "detail is in [CATALOGUE.md](CATALOGUE.md).",
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
+        "",
         "## Licensing exposure",
         "",
         f"**{s['any_licensed']}** of {s['n']} papers "
@@ -516,8 +681,8 @@ def stats_md(s):
         "",
         "## Clusters",
         "",
-        "Ordered along the openness gradient. Non-exclusive, so counts sum above "
-        f"{s['n']}.",
+        "Ordered along the availability gradient. Non-exclusive, so counts sum "
+        f"above {s['n']}.",
         "",
         "| Cluster | n | Data | Code | Composite | Fully open | Median lag | Median data end |",
         "|---|---|---|---|---|---|---|---|",
@@ -529,19 +694,73 @@ def stats_md(s):
                  f"{v['median_end']:.0f} |")
     o += [
         "",
+        "### Cluster composition by period",
+        "",
+        "Non-exclusive; columns sum above the period *n*.",
+        "",
+        "| Cluster | " + " | ".join(PERIOD_ORDER) + " | Total |",
+        "|---|" + "---:|" * (len(PERIOD_ORDER) + 1),
+    ]
+    for c in CLUSTER_ORDER:
+        row = s["cluster_period"][c]
+        cells = [str(row.get(p, 0)) for p in PERIOD_ORDER]
+        o.append(f"| {c} | " + " | ".join(cells) + f" | **{s['clusters'][c]['n']}** |")
+    o.append(
+        "| *Papers in period* | "
+        + " | ".join(f"*{s['periods'].get(p, 0)}*" for p in PERIOD_ORDER)
+        + f" | *{s['n']}* |"
+    )
+    o += [
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
+        "",
+        "### Unit of observation × cluster",
+        "",
+        "| Unit | " + " | ".join(CLUSTER_ORDER) + " | Corpus |",
+        "|---|" + "---:|" * (len(CLUSTER_ORDER) + 1),
+    ]
+    for u in UNIT_ORDER:
+        cells = [str(s["unit_cluster"][c].get(u, 0)) for c in CLUSTER_ORDER]
+        corpus_n = s["unit"].get(u, 0)
+        o.append(f"| {u} | " + " | ".join(cells) + f" | {corpus_n} |")
+    o += [
+        "",
+        "Granularity tracks the input class: asset-level observation concentrates "
+        "where the data is physical or security-level, firm-year where it is "
+        "accounting or vendor-supplied, portfolio-level where it is a rating "
+        "attached to a fund.",
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
+        "",
         "## Methods",
         "",
         "Counted on an **any-mention** basis across the primary and secondary "
         "method fields. A method can be widely used without being any paper's "
         "primary technique, which is why the two columns differ.",
         "",
-        "| Method | Any mention | Primary only | Mean openness | Mean data |",
+        "| Method | Any mention | Primary only | Mean availability | Mean data |",
         "|---|---|---|---|---|",
     ]
     for code, v in s["methods"].items():
         o.append(f"| {METHOD_NAME[code]} | {v['n']} | {v['primary']} | "
                  f"{fmt(v['open'])} | {fmt(v['data'])} |")
     o += [
+        "",
+        "### Method mix by period, any-mention",
+        "",
+        "| Method | " + " | ".join(PERIOD_ORDER) + " | Total |",
+        "|---|" + "---:|" * (len(PERIOD_ORDER) + 1),
+    ]
+    for code in METHOD_ORDER:
+        if code not in s["method_period"]:
+            continue
+        row = s["method_period"][code]
+        cells = [str(row.get(p, 0)) for p in PERIOD_ORDER]
+        o.append(f"| {METHOD_NAME[code]} | " + " | ".join(cells)
+                  + f" | **{s['methods'][code]['n']}** |")
+    o += [
+        "",
+        "*Source: Own calculations with data from the coding workbook.*",
         "",
         "### Methods by cluster",
         "",
@@ -597,7 +816,7 @@ def readme_block(s):
         f"({fmt(100*s['fully_open']/s['n'], 1)} %) |",
         f"| Fully closed (neither) | **{s['fully_closed']}** "
         f"({fmt(100*s['fully_closed']/s['n'], 1)} %) |",
-        f"| Mean openness score | **{fmt(s['open_mean'])}** "
+        f"| Mean availability score | **{fmt(s['open_mean'])}** "
         f"(data {fmt(s['data_mean'])} · code {fmt(s['code_mean'])}) |",
         f"| Code released without data | **{s['code_y_not_open']}** papers, against "
         f"{s['data_y_not_open']} the other way |",
@@ -631,7 +850,7 @@ def readme_badges(s):
         b("corpus", f"{s['n']} papers", "informational"),
         b("journals", "4", "informational"),
         b("fully open", f"{s['fully_open']} ({fmt(pct, 1)}%)", "critical"),
-        b("mean openness", fmt(s["open_mean"]), "yellow"),
+        b("mean availability", fmt(s["open_mean"]), "yellow"),
         b("links checked", s["links_checked_on"], "lightgrey"),
         b("data licence", "CC BY 4.0", "blue"),
         b("code licence", "MIT", "blue"),

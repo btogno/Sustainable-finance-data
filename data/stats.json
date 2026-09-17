@@ -1,6 +1,6 @@
 {
   "n": 109,
-  "built_on": "2026-08-25",
+  "built_on": "2026-09-17",
   "journals": {
     "Journal of Finance": 14,
     "Journal of Financial Economics": 42,
@@ -225,10 +225,10 @@
   },
   "cluster_methods": {
     "Biodiversity & Nature": {
-      "OTH": 1,
       "ECON": 10,
-      "SURV": 2,
+      "OTH": 1,
       "NLP": 3,
+      "SURV": 2,
       "SAT": 2,
       "ML": 1,
       "EXP": 1
@@ -250,8 +250,8 @@
       "FILE": 1
     },
     "Green Bonds & Sustainable Debt": {
-      "OTH": 2,
       "ECON": 12,
+      "OTH": 2,
       "SAT": 2,
       "EXP": 1,
       "SURV": 1
@@ -273,6 +273,240 @@
       "FILE": 2,
       "OTH": 4,
       "META": 1
+    }
+  },
+  "periods": {
+    "2016\u20132020": 16,
+    "2021\u20132023": 33,
+    "2024\u20132026": 54,
+    "2011\u20132015": 6
+  },
+  "journal_period": {
+    "Journal of Finance": {
+      "2016\u20132020": 4,
+      "2021\u20132023": 2,
+      "2024\u20132026": 8
+    },
+    "Journal of Financial Economics": {
+      "2011\u20132015": 6,
+      "2016\u20132020": 7,
+      "2021\u20132023": 14,
+      "2024\u20132026": 15
+    },
+    "Review of Finance": {
+      "2021\u20132023": 7,
+      "2024\u20132026": 24
+    },
+    "Review of Financial Studies": {
+      "2016\u20132020": 5,
+      "2021\u20132023": 10,
+      "2024\u20132026": 7
+    }
+  },
+  "cluster_period": {
+    "Biodiversity & Nature": {
+      "2024\u20132026": 14
+    },
+    "Climate Physical Risk": {
+      "2021\u20132023": 10,
+      "2024\u20132026": 11,
+      "2011\u20132015": 1,
+      "2016\u20132020": 6
+    },
+    "Climate Transition Risk & Corporate Emissions": {
+      "2021\u20132023": 12,
+      "2024\u20132026": 27,
+      "2016\u20132020": 3
+    },
+    "Green Bonds & Sustainable Debt": {
+      "2021\u20132023": 4,
+      "2016\u20132020": 1,
+      "2024\u20132026": 8
+    },
+    "Social & Governance": {
+      "2016\u20132020": 8,
+      "2024\u20132026": 13,
+      "2011\u20132015": 6,
+      "2021\u20132023": 13
+    },
+    "ESG Disclosure & Ratings": {
+      "2016\u20132020": 7,
+      "2024\u20132026": 17,
+      "2021\u20132023": 14
+    }
+  },
+  "method_period": {
+    "ECON": {
+      "2016\u20132020": 15,
+      "2021\u20132023": 30,
+      "2024\u20132026": 48,
+      "2011\u20132015": 6
+    },
+    "SAT": {
+      "2016\u20132020": 2,
+      "2021\u20132023": 8,
+      "2024\u20132026": 4
+    },
+    "NLP": {
+      "2021\u20132023": 2,
+      "2024\u20132026": 7,
+      "2016\u20132020": 1
+    },
+    "SURV": {
+      "2016\u20132020": 1,
+      "2024\u20132026": 4,
+      "2011\u20132015": 1,
+      "2021\u20132023": 3
+    },
+    "EXP": {
+      "2016\u20132020": 3,
+      "2024\u20132026": 2,
+      "2021\u20132023": 1
+    },
+    "FILE": {
+      "2024\u20132026": 2,
+      "2011\u20132015": 1,
+      "2021\u20132023": 1
+    },
+    "ML": {
+      "2024\u20132026": 1
+    },
+    "META": {
+      "2021\u20132023": 1
+    },
+    "OTH": {
+      "2021\u20132023": 4,
+      "2024\u20132026": 5,
+      "2016\u20132020": 1
+    }
+  },
+  "unit_cluster": {
+    "Biodiversity & Nature": {
+      "Other": 5,
+      "Firm-Year": 6,
+      "Asset-Level": 3
+    },
+    "Climate Physical Risk": {
+      "Document-Level": 1,
+      "Firm-Year": 5,
+      "Other": 11,
+      "Asset-Level": 10,
+      "Portfolio-Level": 1
+    },
+    "Climate Transition Risk & Corporate Emissions": {
+      "Document-Level": 1,
+      "Firm-Year": 26,
+      "Other": 6,
+      "Portfolio-Level": 3,
+      "Asset-Level": 3,
+      "(unrecorded)": 1,
+      "Country-Year": 2
+    },
+    "Green Bonds & Sustainable Debt": {
+      "Firm-Year": 3,
+      "Asset-Level": 6,
+      "Other": 3,
+      "Country-Year": 1
+    },
+    "Social & Governance": {
+      "Firm-Year": 17,
+      "Document-Level": 2,
+      "Other": 13,
+      "Portfolio-Level": 6,
+      "Asset-Level": 1,
+      "(unrecorded)": 1
+    },
+    "ESG Disclosure & Ratings": {
+      "Firm-Year": 15,
+      "Document-Level": 1,
+      "Portfolio-Level": 14,
+      "Other": 7,
+      "(unrecorded)": 1
+    }
+  },
+  "source_categories": {
+    "Proprietary Database": {
+      "any": 69,
+      "primary": 41,
+      "class": "licensed"
+    },
+    "Market Data": {
+      "any": 57,
+      "primary": 18,
+      "class": "licensed"
+    },
+    "Official Statistics": {
+      "any": 22,
+      "primary": 15,
+      "class": "public"
+    },
+    "Weather & Hazard": {
+      "any": 18,
+      "primary": 5,
+      "class": "public"
+    },
+    "Other": {
+      "any": 14,
+      "primary": 9,
+      "class": "neither"
+    },
+    "Survey Data": {
+      "any": 11,
+      "primary": 10,
+      "class": "neither"
+    },
+    "SEC Filings": {
+      "any": 5,
+      "primary": 3,
+      "class": "public"
+    },
+    "Earnings Call transcripts": {
+      "any": 4,
+      "primary": 4,
+      "class": "licensed"
+    },
+    "News & Media": {
+      "any": 4,
+      "primary": 3,
+      "class": "licensed"
+    },
+    "Social Media": {
+      "any": 1,
+      "primary": 0,
+      "class": "neither"
+    },
+    "Satellite Imagery": {
+      "any": 1,
+      "primary": 1,
+      "class": "public"
+    },
+    "CDP Reports": {
+      "any": 1,
+      "primary": 0,
+      "class": "public"
+    }
+  },
+  "data_code_matrix": {
+    "Y": {
+      "Y": 6,
+      "N": 3
+    },
+    "Partial": {
+      "Y": 6,
+      "Partial": 1
+    },
+    "Raw Data": {
+      "Y": 8,
+      "N": 27,
+      "Partial": 1
+    },
+    "On Demand": {
+      "N": 5
+    },
+    "N": {
+      "N": 34,
+      "Y": 17,
+      "On Demand": 1
     }
   },
   "lag_median": 4,
