@@ -408,6 +408,12 @@ def catalogue(recs, links, s):
         "[CITATIONS.md](CITATIONS.md); field definitions and scoring keys are in "
         "[CODEBOOK.md](CODEBOOK.md).",
         "",
+        "Three kinds of link appear in each row, and they go to three different "
+        "places. The **ID** links to that paper's full citation in "
+        "[CITATIONS.md](CITATIONS.md). The **Study** title links to the paper "
+        "itself, at its DOI or publisher page. The **Access** column links to "
+        "the data and the code, where the paper releases them.",
+        "",
 "**Availability.** `D:` data — `OPEN` constructed panel released · `PART` "
         "partly released · `RAW` public raw sources named, nothing released · "
         "`REQ` on request · `—` none. `C:` replication code, same scale. The "
@@ -448,6 +454,7 @@ def catalogue(recs, links, s):
         title = oneline(r["short_title"])
         study = f"[{title}]({r['paper_link']})" if r["paper_link"] else title
         study = f"{study}<br><sub>{r['journal']} {r['publication_year']}</sub>"
+        id_cell = f"[{r['paper_id']}](CITATIONS.md#{r['paper_id'].lower()})"
         topics = " ".join(f"`{t}`" for t in r["topic_codes"])
         methods = " ".join(f"`{m}`" for m in r["method_codes"]) or "—"
         inputs = " ".join(
@@ -458,7 +465,7 @@ def catalogue(recs, links, s):
         if r["curation_tier"]:
             score += f" {TIER_BADGE[r['curation_tier']]}"
         out.append(
-            f"| {r['paper_id']} | {study} | {topics} | {methods} | {inputs} | "
+            f"| {id_cell} | {study} | {topics} | {methods} | {inputs} | "
             f"{oneline(r['coverage']) or '—'} | "
             f"{oneline(r['geographic_scope']) or '—'} | {DATA_BADGE[r['data_availability']]} | "
             f"{CODE_BADGE[r['code_availability']]} | {score} | "
@@ -549,12 +556,20 @@ def citations(recs):
         "The full citation for every paper in the corpus, reproduced verbatim as "
         "coded. Ordered by paper ID.",
         "",
+        "Each row carries an anchor on its ID, so the ID column of "
+        "[CATALOGUE.md](CATALOGUE.md) links straight to the citation of the paper "
+        "it names: `CITATIONS.md#p05` lands on P05.",
+        "",
         "| ID | Journal | Citation |",
         "|---|---|---|",
     ]
     for r in sorted(recs, key=lambda r: int(r["paper_id"][1:])):
         cite = oneline(r["citation"])
-        out.append(f"| {r['paper_id']} | {r['journal']} | {cite} |")
+        anchor = r["paper_id"].lower()
+        out.append(
+            f'| <a id="{anchor}" name="{anchor}"></a>{r["paper_id"]} | '
+            f"{r['journal']} | {cite} |"
+        )
     return "\n".join(out) + "\n"
 
 

@@ -43,8 +43,8 @@ every build.
 
 | Path | What it is |
 |---|---|
-| [`docs/CATALOGUE.md`](docs/CATALOGUE.md) | **The catalogue.** All 109 papers, one row each, sorted by availability score: topic and method codes, raw inputs with their licensing exposure, coverage window, geographic scope, availability badges and access links. Indexed by cluster at the foot. |
-| [`docs/CITATIONS.md`](docs/CITATIONS.md) | Full verbatim citation for every paper ID. |
+| [`docs/CATALOGUE.md`](docs/CATALOGUE.md) | **The catalogue.** All 109 papers, one row each, sorted by availability score: topic and method codes, raw inputs with their licensing exposure, coverage window, geographic scope, availability badges and access links. Each row's ID links to that paper's full citation, its title to the paper itself. Indexed by cluster at the foot. |
+| [`docs/CITATIONS.md`](docs/CITATIONS.md) | Full verbatim citation for every paper ID, each row anchored so the catalogue can link straight to it. |
 | [`docs/CODEBOOK.md`](docs/CODEBOOK.md) | Every field defined; the two scoring keys; the source-licensing classification; the topic-to-cluster mapping. Read this before citing any number. |
 | [`docs/STATS.md`](docs/STATS.md) | All descriptive statistics, generated. |
 | [`docs/LINK_CHECKS.md`](docs/LINK_CHECKS.md) | Every data and code link, with its verdict, whether a script or a person established it, and when. |

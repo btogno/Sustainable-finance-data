@@ -62,9 +62,11 @@ def main():
     check("paper ids unique in frozen", len(set(ids_raw)), 109)
     check("derived ids match frozen exactly", sorted(ids_der), sorted(ids_raw))
     check("every id appears in the catalogue",
-          sum(1 for i in ids_raw if re.search(rf"\|\s*{re.escape(i)}\s*\|", catalogue)), 109)
+          sum(1 for i in ids_raw if re.search(
+              rf"\|\s*(?:\[{re.escape(i)}\]\([^)]*\)|{re.escape(i)})\s*\|", catalogue)), 109)
     check("every id appears in citations",
-          sum(1 for i in ids_raw if re.search(rf"\|\s*{re.escape(i)}\s*\|", citations)), 109)
+          sum(1 for i in ids_raw if re.search(
+              rf"\|\s*(?:<a [^>]*></a>)?{re.escape(i)}\s*\|", citations)), 109)
     check("no derived row lost its citation",
           sum(1 for r in derived if not r["citation"]), 0)
 
