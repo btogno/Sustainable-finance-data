@@ -7,13 +7,22 @@ authors:
     family-names: Tognolini
     email: bastien.tognolini@uzh.ch
     affiliation: "University of Zurich, Department of Banking and Finance"
+repository-code: "https://github.com/btogno/sustainable-finance-data"
+url: "https://github.com/btogno/sustainable-finance-data"
+# At release, before minting the Zenodo DOI, update the two fields below to the
+# tag and date actually released, then add the DOIs Zenodo issues:
+#   doi: 10.5281/zenodo.XXXXXXX        # version DOI — the one the thesis cites
+#   identifiers:
+#     - type: doi
+#       value: 10.5281/zenodo.YYYYYYY  # concept DOI — always the latest version
+#       description: "Concept DOI resolving to the latest version"
 version: 1.0.0
 date-released: 2026-08-21
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 keywords:
   - sustainable finance
-  - open data
+  - data availability
   - reproducibility
   - replication
   - research data management
@@ -26,9 +35,9 @@ abstract: >-
   published in the Journal of Finance, Journal of Financial Economics, Review of
   Financial Studies and Review of Finance through April 2026. Each paper is
   hand-coded on topic, method, raw data source, temporal coverage, geographic
-  scope of the data and unit of observation, and scored on two openness
-  dimensions — data availability and replication code availability. Unlike a
-  conventional open-data index the corpus is not conditioned on openness:
-  papers releasing nothing are included, so that the openness rate of the field
-  is measurable rather than assumed. Access links carry recorded verification
-  verdicts and a check date.
+  scope of the data and unit of observation, and scored on two availability
+  dimensions — data availability and replication code availability. The corpus
+  is not conditioned on availability: papers releasing nothing are included
+  beside those that release everything, so that the availability rate of the
+  field is measurable rather than assumed. Access links carry recorded
+  verification verdicts and a check date.

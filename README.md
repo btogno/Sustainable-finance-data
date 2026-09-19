@@ -226,7 +226,11 @@ new entries arrive in a separate extension file so that both stay citable.
 
 If you use this catalogue, please cite it. [`CITATION.cff`](CITATION.cff) is
 machine-readable and GitHub renders a "Cite this repository" button from it.
-Minting a DOI takes about five minutes and is described in the same file.
+
+- Repository: <https://github.com/btogno/sustainable-finance-data>
+- Archived version DOI: `10.5281/zenodo.XXXXXXX` — minted at release. Cite the
+  version DOI rather than the concept DOI, so that a reader following it lands
+  on exactly the corpus and figures reported, not on a later revision.
 
 ## Licence
 
